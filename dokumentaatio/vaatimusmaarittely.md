@@ -5,6 +5,7 @@ Sovelluksen avulla käyttäjien on mahdollista etsiä käyttäjän määrittelem
 Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjärooli, eli *normaali käyttäjä*. Myöhemmin sovellukseen lisätään suuremmilla oikeuksilla varustettu pääkäyttäjä.
 ## Perusversion tarjoama toiminnallisuus
 ### Ennen kirjautumista
+* Käyttäjä voi etsiä ennaltamäärätyistä tietokannoista haluttua merkkijonoa
 * Käyttäjä voi luoda järjestelmään käyttäjätunnuksen
 * Käyttäjä voi valita käyttää "Guest"-tilaa
 ### Kirjautumisen jälkeen
