@@ -4,10 +4,14 @@
 
 [Työaikakirjanpito](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
-##Komentorivitoiminnot
-###Testaus
+## Komentorivitoiminnot
+### Testaus
 Tesit suoritetaan kommenolla
-`<mvn test>`
+```
+mvn test
+```
 Testikattavuusraportti luodaan komennolla
-`<mvn jacoco:report>`
+```
+mvn jacoco:report
+```
 Testikattavuusraportia voi tarkastella avaamalla selaimella tiedosto *target/site/jacoco/index.html*
