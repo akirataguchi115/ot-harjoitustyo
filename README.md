@@ -6,7 +6,7 @@
 
 ## Komentorivitoiminnot
 ### Testaus
-Tesit suoritetaan kommenolla
+Testit suoritetaan kommenolla
 ```
 mvn test
 ```
