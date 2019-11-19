@@ -1,0 +1,30 @@
+title HSL sequence (Java)
+
+Main->*laitehallinto:new HKLLaitehallinto()
+
+Main->*rautatietori:new Lataajalaite()
+Main->*ratikka6:new Lukijalaite()
+Main->*bussi224:new Lukijalaite()
+
+Main->laitehallinto:lisaaLataaja(rautatietori)
+Main->laitehallinto:lisaaLukija(ratikka6)
+Main->laitehallinto:lisaaLukija(bussi224)
+
+Main->*lippuluukku:new Kioski()
+Main->lippuluukku:ostaMatkakortti("Arto")
+lippuluukku->*artonKortti:new Matkakortti("Arto")
+artonKortti-->lippuluukku:uusiKortti
+lippuluukku-->Main:artonKortti
+
+Main->rautatietori:lataaArvoa(artonKortti,3)
+rautatietori->artonKortti:kasvataArvoa(3)
+
+Main->ratikka6:ostaLippu(artonKortti,0)
+ratikka6->artonKortti:getArvo()
+artonKortti-->ratikka6:3
+ratikka6->artonKortti:vahennaArvoa(3)
+ratikka6-->Main:true
+Main->bussi224:ostaLippu(artonKortti,2)
+bussi224->artonKortti:getArvo()
+artonKortti-->bussi224:1.5
+bussi224-->Main:false

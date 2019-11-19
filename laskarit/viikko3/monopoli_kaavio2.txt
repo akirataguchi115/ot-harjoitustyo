@@ -1,0 +1,12 @@
+%2F%2F Cool Class Diagram, [Pelaaja|rahaa:Integer]1-1[Pelinappula],
+[Pelilauta]1-40[<<Ruutu>>;toiminta()],
+[Pelinappula]0..8-1[<<Ruutu>>;toiminta()],
+[Monopoli|noppa1:Noppa;noppa2:Noppa]1-2..8[Pelaaja], [Pelilauta]1-1[Monopoli],
+[<<Ruutu>>;toiminta()]^-.-[Aloitusruutu|seuraava:Ruutu],[<<Ruutu>>;toiminta()]^-.-[Vankila|seuraava:Ruutu],[<<Ruutu>>;toiminta()]^-.-[Sattuma|seuraava:Ruutu],[<<Ruutu>>;toiminta()]^-.-[Yhteismaa|seuraava:Ruutu],[<<Ruutu>>;toiminta()]^-.-[Asema|seuraava:Ruutu],[<<Ruutu>>;toiminta()]^-.-[Laitos|seuraava:Ruutu],[<<Ruutu>>;toiminta()]^-.-[Katu|seuraava:Ruutu;nimi:String],
+[Sattuma|edellinen:Ruutu]1-1[Kortti|toiminto:Toiminto],
+[Yhteismaa|edellinen:Ruutu]1-1[Kortti|toiminto:Toiminto],
+[Pelaaja]0..1-0..*[Katu],
+[Katu]1-0..4[Talo],
+[Katu]1-0..1[Hotelli],
+[Monopoli]-[Aloitusruutu],
+[Monopoli]-[Vankila]

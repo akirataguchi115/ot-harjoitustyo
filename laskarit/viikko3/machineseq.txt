@@ -1,0 +1,14 @@
+title Machine sequence (Java)
+
+Outside->*Machine:new Machine()
+Machine->*FuelTank:new FuelTank()
+Machine->FuelTank: fill(40)
+Machine->*Engine:new Engine(FuelTank)
+
+Outside->Machine: drive()
+Machine->Engine: start()
+Engine->FuelTank: consume(5)
+Machine->Engine: isRunning()
+Engine-->Machine: true
+Machine->Engine: useEnergy()
+Engine->FuelTank: consume(10)
