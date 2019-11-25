@@ -1,9 +1,6 @@
 
-import java.util.ArrayList;
-import org.junit.After;
-import org.junit.AfterClass;
+import java.io.IOException;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import pressf.domain.Finder;
@@ -18,12 +15,14 @@ public class FinderTest {
     }
 
     @Test
-    public void loytaaMerkkijonon() {
-        ArrayList<String> lista = new ArrayList<>();
-        lista.add("Tietokannan normalisointi tehdään olemassaolevalle tietokannalle. Tietokannan normalisoinnissa etsimme tietokantatauluista tunnettuja epäkohtia, jonka jälkeen näitä epäkohtia korjataan.");
-        lista.add("Tunnettujen epäkohtien tunnistaminen tapahtuu askeleittain valmiita \"säännöstöjä\" eli normaalimuotoja seuraamalla.");
-        lista.add("Ensimmäisessä normaalimuodossa otetaan ensiaskeleet tietokannan rakenteen lineaarisoitumiseen");
-        assertEquals("lineaari", f.etsi(lista, "lineaari"));
+    public void loytaaSivulta() throws IOException {
+        String link = "https://ohjelmointi-19.mooc.fi/osa-1/1-johdanto";
+        assertTrue(this.f.etsi("digi", link));
     }
 
+    @Test
+    public void eiLoydaSivulta() throws IOException {
+        String link = "https://ohjelmointi-19.mooc.fi/osa-1/1-johdanto";
+        assertFalse(this.f.etsi("peruna", link));
+    }
 }

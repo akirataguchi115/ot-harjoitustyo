@@ -5,11 +5,15 @@ Sovelluksen avulla käyttäjien on mahdollista etsiä käyttäjän määrittelem
 Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjärooli, eli *normaali käyttäjä*. Myöhemmin sovellukseen lisätään suuremmilla oikeuksilla varustettu pääkäyttäjä.
 ## Perusversion tarjoama toiminnallisuus
 ### Ennen kirjautumista
-* Käyttäjä voi etsiä ennaltamäärätyistä tietokannoista haluttua merkkijonoa
-* Käyttäjä voi luoda järjestelmään käyttäjätunnuksen
-* Käyttäjä voi valita käyttää "Guest"-tilaa
+Toiminnallisuus | Status
+--------------- | ------
+Käyttäjä voi etsiä merkkijonoa halutun linkin viittaamasta nettisivusta | tehty
+Käyttäjä voi etsiä ennaltamäärätyistä tietokannoista haluttua merkkijonoa | 
+Käyttäjä voi luoda järjestelmään käyttäjätunnuksen |
+Käyttäjä voi valita käyttää "Guest"-tilaa |
+
 ### Kirjautumisen jälkeen
-* Käyttäjä voi lisätä väliaikaiselle -tai pysyvälle listalleen erilaisia dokumentteja sallituissa muodoissa. Aluksi ainoa sallittu muoto on `<.txt>`.
+* Käyttäjä voi lisätä väliaikaiselle -tai pysyvälle listalleen erilaisia dokumentteja sallituissa muodoissa. Aluksi ainoa sallittu muoto on nettisivu.
 ## Jatkokehitysideoita
 Perusversion jälkeen järjestelmää täydennetään ajan salliessa esim. seuraavilla toiminnallisuuksilla:
 * useampaa tuettua formaattia, esim. `<.pdf`> ja `<.html>`
