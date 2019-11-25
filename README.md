@@ -11,7 +11,6 @@ Ohjelma käynnistetään suorittamalla polusta _pressf/_ komento
 ```
 mvn compile exec:java -Dexec.mainClass=PressF
 ```
-.
 
 ### Testaus
 Testit suoritetaan kommenolla
