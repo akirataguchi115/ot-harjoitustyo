@@ -8,7 +8,8 @@ Alkuvaiheessa sovelluksella on ainoastaan yksi käyttäjärooli, eli *normaali k
 Toiminnallisuus | Status
 --------------- | ------
 Käyttäjä voi etsiä merkkijonoa halutun linkin viittaamasta nettisivusta | tehty
-Käyttäjä voi etsiä ennaltamäärätyistä tietokannoista haluttua merkkijonoa | 
+Käyttäjä voi etsiä merkkijonoa useista linkkien viittaamista nettisivuista |
+Käyttäjä voi etsiä ennaltamäärätyistä tietokannoista haluttua merkkijonoa |
 Käyttäjä voi luoda järjestelmään käyttäjätunnuksen |
 Käyttäjä voi valita käyttää "Guest"-tilaa |
 
