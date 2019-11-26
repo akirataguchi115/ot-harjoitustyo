@@ -11,7 +11,7 @@
 ### Ohjelman käynnistäminen
 Ohjelma käynnistetään suorittamalla polusta _pressf/_ komento
 ```
-mvn compile exec:java -Dexec.mainClass=PressF
+mvn compile exec:java -Dexec.mainClass=Main
 ```
 Syötettävä linkki pitää olla muodossa [https:// tai http://](https://tietokantojen-perusteet-19.mooc.fi/osa-3/1-tiedon-kuvaaminen)
 ### Testaus
