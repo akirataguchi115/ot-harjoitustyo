@@ -5,6 +5,7 @@
 [Työaikakirjanpito](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 [Arkkitehtuurikuvaus](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+[Releaset](https://github.com/akirataguchi115/ot-harjoitustyo/releases)
 
 ## Komentorivitoiminnot
 
