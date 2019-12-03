@@ -1,6 +1,6 @@
 # Käyttöohje
 
-Lataa tiedosto [pressf.jar](github.com/akirataguchi115/ot-harjoitystyo)
+Lataa tiedosto [pressf.jar](https://github.com/akirataguchi115/ot-harjoitustyo/releases/download/viikko5/pressf.jar)
 
 ## Konfigurointi
 
