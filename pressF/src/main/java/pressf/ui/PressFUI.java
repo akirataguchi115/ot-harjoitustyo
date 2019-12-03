@@ -1,6 +1,8 @@
 package pressf.ui;
 
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Properties;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,14 +13,26 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import pressf.dao.FileUserDao;
 import pressf.domain.Finder;
+import pressf.domain.PressFService;
 
 public class PressFUI extends Application {
 
     private Finder finder;
+    private PressFService service;
 
     public PressFUI() {
         this.finder = new Finder();
+    }
+
+    @Override
+    public void init() throws Exception {
+        Properties properties = new Properties();
+        properties.load(new FileInputStream("config.properties"));
+        String userFile = properties.getProperty("userFile");
+        FileUserDao userDao = new FileUserDao(userFile);
+        this.service = new PressFService(userDao);
     }
 
     @Override
@@ -32,13 +46,14 @@ public class PressFUI extends Application {
         buttons.getChildren().addAll(button, quit);
         TextField searchWord = new TextField();
         Text result = new Text();
+        Button add = new Button("Add");
         TextField link = new TextField("https://");
         Text linkText = new Text("Search from URL:(\"https://\")");
         Text searchWordText = new Text("Search for a word:");
         VBox searchWordBp = new VBox();
         searchWordBp.getChildren().addAll(searchWordText, searchWord);
         VBox linkVb = new VBox();
-        linkVb.getChildren().addAll(linkText, link);
+        linkVb.getChildren().addAll(add, linkText, link);
         button.setOnAction(event -> {
             try {
                 if (this.finder.etsi(searchWord.getText(), link.getText())) {
@@ -52,6 +67,9 @@ public class PressFUI extends Application {
         });
         quit.setOnAction(event -> {
             stage.close();
+        });
+        add.setOnAction(event -> {
+            if (this.finder.add(link.getText()));
         });
         searchBp.setCenter(result);
         searchBp.setRight(searchWordBp);
@@ -73,6 +91,9 @@ public class PressFUI extends Application {
         Button createButton = new Button("Create an account");
         createButton.setOnAction(event -> {
             stage.setScene(searchScene);
+            String name = userName.getText();
+            String pwrod = passWord.getText();
+            this.service.createUser(userName.getText(), passWord.getText());
             //DB manipulation
         });
         Button loginQuitButton = new Button("Quit");

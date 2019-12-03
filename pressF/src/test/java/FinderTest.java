@@ -16,13 +16,13 @@ public class FinderTest {
 
     @Test
     public void loytaaSivulta() throws IOException {
-        String link = "https://ohjelmointi-19.mooc.fi/osa-1/1-johdanto";
-        assertTrue(this.f.etsi("digi", link));
+        String link = "https://mooc.fi";
+        assertTrue(this.f.etsi("yliopisto", link));
     }
 
     @Test
     public void eiLoydaSivulta() throws IOException {
-        String link = "https://ohjelmointi-19.mooc.fi/osa-1/1-johdanto";
+        String link = "https://mooc.fi";
         assertFalse(this.f.etsi("peruna", link));
     }
 }
