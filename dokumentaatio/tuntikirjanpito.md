@@ -6,4 +6,5 @@ päivä | aika | mitä tein
 24.11 | 1 | Jsoup -kirjastoon tutustuttu
 25.11 | 2 | 4 viikon vaatimukset täytetty + graafinen käyttöliittymä alustettu
 28.11 | 1 | Graafinen käyttöliittymä alustettu tietokannan implementointia varten
-yht | 5 |
+3.12 | 2 | Useista nettisivuista etsiminen, linkkien tallentaminen ja käyttäjätunnusten luominen
+yht | 8 |
