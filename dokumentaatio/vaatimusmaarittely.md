@@ -9,10 +9,12 @@ Toiminnallisuus | Status
 --------------- | ------
 Käyttäjä voi etsiä merkkijonoa halutun linkin viittaamasta nettisivusta | tehty
 Käyttäjä voi etsiä merkkijonoa useista linkkien viittaamista nettisivuista | tehty
-Käyttäjä voi etsiä ennaltamäärätyistä tietokannoista haluttua merkkijonoa |
+Sovellus huutaa, jos salasana on liian lyhyt | tehty
+Sovellus huutaa, jos tunnusta luotaessa käyttäjätunnus löytyy jo tiedostosta | tehty
 Käyttäjä voi luoda järjestelmään käyttäjätunnuksen | tehty
 Käyttäjä voi tallettaa useat linkkinsä pysyvästi tekstitiedostoon | tehty
 Käyttäjä voi valita käyttää "Guest"-tilaa |
+Käyttäjä voi etsiä ennaltamäärätyistä tietokannoista haluttua merkkijonoa |
 
 ### Kirjautumisen jälkeen
 * Käyttäjä voi lisätä väliaikaiselle -tai pysyvälle listalleen erilaisia dokumentteja sallituissa muodoissa. Aluksi ainoa sallittu muoto on nettisivu.
