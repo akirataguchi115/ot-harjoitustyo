@@ -17,3 +17,24 @@ Kun kirjautumisnäkymässä on syötekenttään kirjoitettu käyttäjätunnus ja
 
 <img src="pressfsekvenssi.png">
 
+## Käyttöliittymä
+
+## Sovelluslogiikka
+
+## Tietojen pysyväistallennus
+
+### Tiedostot
+
+### Päätoiminnallisuudet
+
+#### käyttäjän kirjaantuminen
+
+#### uuden käyttäjän luominen
+
+#### Muut toiminnallisuudet
+
+## Ohjelman rakenteeseen jääneet heikkoudet
+
+### käyttöliittymä
+
+### DAO-luokat
