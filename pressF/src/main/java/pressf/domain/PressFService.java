@@ -8,25 +8,22 @@ import java.util.stream.Collectors;
 import pressf.dao.UserDao;
 import pressf.domain.User;
 
-/**
- * Sovelluslogiikasta vastaava luokka
- */
 public class PressFService {
 
     private UserDao userDao;
     private User loggedIn;
 
+    /**
+     * Constructor for PressFService.
+     *
+     * @param userDao userDao object given as parameter
+     */
     public PressFService(UserDao userDao) {
         this.userDao = userDao;
     }
 
     /**
-     * Uuden todon lisääminen kirjautuneena olevalle käyttäjälle
-     *
-     * @param content luotavan todon sisältö
-     */
-    /**
-     * sisäänkirjautuminen
+     * sisäänkirjautuminen.
      *
      * @param username käyttäjätunnus
      *
@@ -44,7 +41,7 @@ public class PressFService {
     }
 
     /**
-     * kirjautuneena oleva käyttäjä
+     * kirjautuneena oleva käyttäjä.
      *
      * @return kirjautuneena oleva käyttäjä
      */
@@ -53,22 +50,27 @@ public class PressFService {
     }
 
     /**
-     * uloskirjautuminen
+     * uloskirjautuminen.
      */
     public void logout() {
         loggedIn = null;
     }
 
     /**
-     * uuden käyttäjän luominen
+     * uuden käyttäjän luominen.
      *
      * @param username käyttäjätunnus
-     * @param name käyttäjän nimi
+     * @param password password
      *
      * @return true jos käyttäjätunnus on luotu onnistuneesti, muuten false
      */
-    public boolean createUser(String username,String password) {
+    public boolean createUser(String username, String password) {
         if (userDao.findByUsername(username) != null) {
+            System.out.println("User already defined");
+            return false;
+        }
+        if (password.length() < 4) {
+            System.out.println("Password too short");
             return false;
         }
         User user = new User(username, password);

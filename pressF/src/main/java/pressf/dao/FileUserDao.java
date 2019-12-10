@@ -12,6 +12,13 @@ public class FileUserDao implements UserDao {
     private List<User> users;
     private String file;
 
+    /**
+     * Constructor for FileuserDao.
+     *
+     * @param file file containing users.
+     * @throws Exception  
+     *
+     */
     public FileUserDao(String file) throws Exception {
         users = new ArrayList<>();
         this.file = file;

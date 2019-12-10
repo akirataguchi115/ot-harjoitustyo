@@ -89,11 +89,15 @@ public class PressFUI extends Application {
             //DB manipulation
         });
         Button createButton = new Button("Create an account");
+        Text error = new Text();
         createButton.setOnAction(event -> {
-            stage.setScene(searchScene);
-            String name = userName.getText();
-            String pwrod = passWord.getText();
-            this.service.createUser(userName.getText(), passWord.getText());
+            if (!this.service.createUser(userName.getText(), passWord.getText())) {
+                error.setText("User already defined or password too short (4 chars)");
+            } else {
+                stage.setScene(searchScene);
+                String name = userName.getText();
+                String pwrod = passWord.getText();
+            }
             //DB manipulation
         });
         Button loginQuitButton = new Button("Quit");
@@ -103,7 +107,7 @@ public class PressFUI extends Application {
         HBox loginButtons = new HBox();
         loginButtons.getChildren().addAll(loginButton, createButton, loginQuitButton);
         VBox vbox = new VBox();
-        vbox.getChildren().addAll(userNameText, userName, passWordText, passWord);
+        vbox.getChildren().addAll(userNameText, userName, passWordText, passWord, error);
         loginBp.setCenter(vbox);
         loginBp.setBottom(loginButtons);
         Scene loginScene = new Scene(loginBp);
