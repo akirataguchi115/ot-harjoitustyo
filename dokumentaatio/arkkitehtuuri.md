@@ -31,6 +31,16 @@ jokainen näistä on toteutettu omana [Scene](https://docs.oracle.com/javase/8/j
 
 ### Tiedostot
 
+Sovellus tallettaa käyttäjätiedot erilliseen tiedostoon.
+
+Sovellus tallettaa käyttäjät seuraavassa muodossa
+
+<pre>
+username;password
+anotheruser;password2
+</pre>
+
+
 ### Päätoiminnallisuudet
 
 #### käyttäjän kirjaantuminen
