@@ -8,4 +8,5 @@ päivä | aika | mitä tein
 28.11 | 1 | Graafinen käyttöliittymä alustettu tietokannan implementointia varten
 3.12 | 3 | Useista nettisivuista etsiminen, linkkien tallentaminen ja käyttäjätunnusten luominen
 9.12 | 1 | Javadocin kanssa taistelua
+10.12 | 5 | Käyttäjätunnuksen luontiin lisätty toiminnallisuutta, sekä näiden lisäysten puitteissa tehty refaktorointia, lisätty javadoc, putsattu checkstyle sekä nostettu testikattavuutta.
 yht | 9 |
