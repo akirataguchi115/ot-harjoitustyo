@@ -25,10 +25,6 @@ Testikattavuusraportti luodaan komennolla
 ```
 mvn jacoco:report
 ```
-Projektin koodin pystyy suorittamaan NetBeansin vihreällä napilla tai/ja komennolla
-```
-mvn compile exec:java -Dexec.mainClass=Main
-```
 Testikattavuusraportia voi tarkastella avaamalla selaimella tiedosto *target/site/jacoco/index.html*
 
 ### Checkstyle
