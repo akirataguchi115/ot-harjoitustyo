@@ -3,7 +3,7 @@
 ## Rakenne
 Ohjelman rakenne tulee noudattamaan kolmitasoista kerrosarkkitehtuuria(DAO vielä lisää), ja koodin pakkausrakenne on seuraava:
 
-![pakkausrakenne](pakettikaavio.png)
+![pakkausrakenne](pakettikaavio2.png)
 
 Pakkaus _pressf.ui_ sisältää JavaFX:llä toteutetun käyttöliittymän ja _pressf.domain_ sovelluslogiikan.
 
@@ -18,6 +18,12 @@ Kun kirjautumisnäkymässä on syötekenttään kirjoitettu käyttäjätunnus ja
 <img src="pressfsekvenssi.png">
 
 ## Käyttöliittymä
+
+Käyttöliittymä sisältää kolme kaksi erillistä näkymää
+- kirjautuminen
+- haku
+
+jokainen näistä on toteutettu omana [Scene](https://docs.oracle.com/javase/8/javafx/api/javafx/scene/Scene.html)-oliona.
 
 ## Sovelluslogiikka
 
@@ -37,4 +43,8 @@ Kun kirjautumisnäkymässä on syötekenttään kirjoitettu käyttäjätunnus ja
 
 ### käyttöliittymä
 
+Käyttöliittymän sisennyksiä voisi parannella käytetävyyden parantamiseksi.
+
 ### DAO-luokat
+
+Clutteria ja refaktorointia voisi harjoittaa ajan puitteissa. Ohjelmaa olisi tällöin helpompi kehittää eteenpäin.
