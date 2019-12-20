@@ -7,6 +7,7 @@ public class User {
 
     /**
      * Creates an instance of User with given parameters.
+     *
      * @param username username
      * @param pwrd password
      */
@@ -22,5 +23,4 @@ public class User {
     public String getPwrd() {
         return pwrd;
     }
-
 }
