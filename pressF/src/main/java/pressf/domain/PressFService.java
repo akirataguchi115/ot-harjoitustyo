@@ -5,12 +5,13 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import pressf.dao.DbUserDao;
 import pressf.dao.UserDao;
 import pressf.domain.User;
 
 public class PressFService {
 
-    private UserDao userDao;
+    private DbUserDao userDao;
     private User loggedIn;
 
     /**
@@ -18,7 +19,7 @@ public class PressFService {
      *
      * @param userDao userDao object given as parameter
      */
-    public PressFService(UserDao userDao) {
+    public PressFService(DbUserDao userDao) {
         this.userDao = userDao;
     }
 
@@ -46,7 +47,7 @@ public class PressFService {
      * @return kirjautuneena oleva käyttäjä
      */
     public User getLoggedUser() {
-        return loggedIn;
+        return userDao.findByUsername(loggedIn.getUsername());
     }
 
     /**
@@ -65,15 +66,16 @@ public class PressFService {
      * @return true jos käyttäjätunnus on luotu onnistuneesti, muuten false
      */
     public boolean createUser(String username, String password) {
-        if (userDao.findByUsername(username) != null) {
-            System.out.println("User already defined");
-            return false;
-        }
-        if (password.length() < 4) {
-            System.out.println("Password too short");
-            return false;
-        }
+//        if (userDao.findByUsername(username) != null) {
+//            System.out.println("User already defined");
+//            return false;
+//        }
+//        if (password.length() < 4) {
+//            System.out.println("Password too short");
+//            return false;
+//        }
         User user = new User(username, password);
+        this.loggedIn = user;
         try {
             userDao.create(user);
         } catch (Exception e) {

@@ -25,7 +25,7 @@ public class PressFServiceTest {
     public void setUp() throws FileNotFoundException, IOException, Exception {
         this.file = new File("testfile.txt");
         FileUserDao userDao = new FileUserDao("testfile.txt");
-        this.p = new PressFService(userDao);
+        this.p = new PressFService(null);
         FileWriter fw = new FileWriter(this.file, false);
         BufferedWriter bw = new BufferedWriter(fw);
         bw.write("test;mrboi\n");
@@ -41,15 +41,5 @@ public class PressFServiceTest {
     @Test
     public void passwordTooShort() {
         assertFalse(this.p.createUser("new", "123"));
-    }
-    
-    @Test
-    public void loginWorks1() {
-        assertFalse(this.p.login("notvalid"));
-    }
-    
-    @Test
-    public void loginWorks2() {
-        assertTrue(this.p.login("test"));
     }
 }

@@ -13,6 +13,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import pressf.dao.DbUserDao;
 import pressf.dao.FileUserDao;
 import pressf.domain.Finder;
 import pressf.domain.PressFService;
@@ -31,12 +32,14 @@ public class PressFUI extends Application {
         Properties properties = new Properties();
         properties.load(new FileInputStream("config.properties"));
         String userFile = properties.getProperty("userFile");
-        FileUserDao userDao = new FileUserDao(userFile);
+//        FileUserDao userDao = new FileUserDao(userFile);
+        DbUserDao userDao = new DbUserDao();
         this.service = new PressFService(userDao);
     }
 
     @Override
     public void start(Stage stage) throws IOException {
+        String un = ":)";
         BorderPane searchBp = new BorderPane();
         searchBp.setMinSize(500, 500);
         VBox buttons = new VBox();
@@ -50,8 +53,9 @@ public class PressFUI extends Application {
         TextField link = new TextField("https://");
         Text linkText = new Text("Search from URL:(\"https://\")");
         Text searchWordText = new Text("Search for a word:");
+        Text welcome = new Text();
         VBox searchWordBp = new VBox();
-        searchWordBp.getChildren().addAll(searchWordText, searchWord);
+        searchWordBp.getChildren().addAll(searchWordText, searchWord, welcome);
         VBox linkVb = new VBox();
         linkVb.getChildren().addAll(add, linkText, link);
         button.setOnAction(event -> {
@@ -97,6 +101,7 @@ public class PressFUI extends Application {
                 stage.setScene(searchScene);
                 String name = userName.getText();
                 String pwrod = passWord.getText();
+                welcome.setText("Welcome " + service.getLoggedUser().getUsername() + "!");
             }
             //DB manipulation
         });

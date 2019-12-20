@@ -20,6 +20,7 @@ public class Finder {
 
     /**
      * Finds the word passed in the parameter from a given link.
+     *
      * @param searchWord the word user wants to search FOR
      * @param link the link from where the user wants to search FROM
      * @return returns true if the searched word was found succesfully, else
@@ -42,11 +43,13 @@ public class Finder {
         }
         return false;
     }
-/**
- * Adds a link passed in the parameter to links.txt via Jsoup verification.
- * @param link the link to be added
- * @return true if the append was succesful; false if not
- */
+
+    /**
+     * Adds a link passed in the parameter to links.txt via Jsoup verification.
+     *
+     * @param link the link to be added
+     * @return true if the append was succesful; false if not
+     */
     public boolean add(String link) {
         try {
             Document document = Jsoup.connect(link).timeout(0).get();
