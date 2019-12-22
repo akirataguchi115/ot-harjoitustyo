@@ -32,9 +32,6 @@ public class PressFUI extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-//        if (isTest) {
-//            return;
-//        }
         String un = ":)";
         BorderPane searchBp = new BorderPane();
         searchBp.setMinSize(500, 500);
@@ -86,7 +83,6 @@ public class PressFUI extends Application {
         Button loginButton = new Button("Login");
         loginButton.setOnAction(event -> {
             stage.setScene(searchScene);
-            //DB manipulation
         });
         Button createButton = new Button("Create an account");
         Text error = new Text();
@@ -99,7 +95,6 @@ public class PressFUI extends Application {
                 String pwrod = passWord.getText();
                 welcome.setText("Welcome " + service.getLoggedUser().getUsername() + "!");
             }
-            //DB manipulation
         });
         Button loginQuitButton = new Button("Quit");
         loginQuitButton.setOnAction(blaah -> {

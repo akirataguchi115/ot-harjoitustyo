@@ -6,6 +6,7 @@ import java.util.Properties;
 import pressf.domain.User;
 
 /**
+ * DAO for database manipulation.
  *
  * @author Akira Taguchi
  */
@@ -16,6 +17,12 @@ public class DbUserDao implements UserDao {
 
     private boolean isTest;
 
+    /**
+     * Constructor for DbUserDao.
+     *
+     * @param isTest defines whether to use test database or not.
+     * @throws Exception if the adding of .config.properties results in error.
+     */
     public DbUserDao(boolean isTest) throws Exception {
         properties = new Properties();
         properties.load(new FileInputStream("./config.properties"));
@@ -59,6 +66,9 @@ public class DbUserDao implements UserDao {
         return new User(un, pw);
     }
 
+    /**
+     * Initializes the SQLITE3 database.
+     */
     public void initDatabase() {
         try {
             Connection connection = connect();
