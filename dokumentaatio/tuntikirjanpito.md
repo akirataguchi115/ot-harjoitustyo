@@ -11,4 +11,6 @@ päivä | aika | mitä tein
 10.12 | 5 | Käyttäjätunnuksen luontiin lisätty toiminnallisuutta, sekä näiden lisäysten puitteissa tehty refaktorointia, lisätty javadoc, putsattu checkstyle sekä nostettu testikattavuutta.
 19.12 | 8 | Tietokanta pultattu ja integroitu.
 20.12 | 1 | Testien hiomista ja dokumentoimista.
-yht | 24 |
+21.12 | 3 | Testit, Javadoc, checkstyle ja .jar loppupalautuskuntoon.
+22.12 | 3 | Dokumentaatio loppukuntoon.
+yht | 30 |
