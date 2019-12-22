@@ -18,7 +18,7 @@ public class DbUserDao implements UserDao {
 
     public DbUserDao(boolean isTest) throws Exception {
         properties = new Properties();
-        properties.load(new FileInputStream("config.properties"));
+        properties.load(new FileInputStream("./config.properties"));
         userDatabase = properties.getProperty("userdb");
         initDatabase();
         this.isTest = isTest;

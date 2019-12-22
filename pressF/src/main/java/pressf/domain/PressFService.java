@@ -59,14 +59,6 @@ public class PressFService {
      * @return true jos käyttäjätunnus on luotu onnistuneesti, muuten false
      */
     public boolean createUser(String username, String password) {
-//        if (userDao.findByUsername(username) != null) {
-//            System.out.println("User already defined");
-//            return false;
-//        }
-//        if (password.length() < 4) {
-//            System.out.println("Password too short");
-//            return false;
-//        }
         User user = new User(username, password);
         this.loggedIn = user;
         try {
