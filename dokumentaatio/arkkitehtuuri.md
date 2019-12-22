@@ -31,25 +31,11 @@ jokainen näistä on toteutettu omana [Scene](https://docs.oracle.com/javase/8/j
 
 ### Tiedostot
 
-Sovellus tallettaa käyttäjätiedot erilliseen tiedostoon.
-
-Sovellus tallettaa käyttäjät seuraavassa muodossa
-
-<pre>
-username;password
-anotheruser;password2
-</pre>
-
-
-### Päätoiminnallisuudet
-
-#### käyttäjän kirjaantuminen
-
-#### uuden käyttäjän luominen
-
-#### Muut toiminnallisuudet
+Sovellus tallettaa käyttäjätiedot yhteen tietokantatauluun. Taulun sarakkeita ovat ```id(auto increment), käyttäjätunnus(merkkijono),salasana(merkkijono)```
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
+
+Tietokantoja voisi vielä hyödyntää vielä enemmän. Tällä hetkellä ainoa tietokantoihin kohdistuva "haku" on käyttäjänimen etsiminen ja sillä tervehtiminen.
 
 ### käyttöliittymä
 
