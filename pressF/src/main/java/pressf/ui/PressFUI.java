@@ -1,8 +1,6 @@
 package pressf.ui;
 
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.Properties;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,7 +12,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import pressf.dao.DbUserDao;
-import pressf.dao.FileUserDao;
 import pressf.domain.Finder;
 import pressf.domain.PressFService;
 
@@ -29,16 +26,15 @@ public class PressFUI extends Application {
 
     @Override
     public void init() throws Exception {
-        Properties properties = new Properties();
-        properties.load(new FileInputStream("config.properties"));
-        String userFile = properties.getProperty("userFile");
-//        FileUserDao userDao = new FileUserDao(userFile);
-        DbUserDao userDao = new DbUserDao();
+        DbUserDao userDao = new DbUserDao(false);
         this.service = new PressFService(userDao);
     }
 
     @Override
     public void start(Stage stage) throws IOException {
+//        if (isTest) {
+//            return;
+//        }
         String un = ":)";
         BorderPane searchBp = new BorderPane();
         searchBp.setMinSize(500, 500);
@@ -119,5 +115,9 @@ public class PressFUI extends Application {
 
         stage.setScene(loginScene);
         stage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }

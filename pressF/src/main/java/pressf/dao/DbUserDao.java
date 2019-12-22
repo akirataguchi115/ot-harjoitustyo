@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package pressf.dao;
 
+import java.io.FileInputStream;
 import java.sql.*;
-import java.util.List;
+import java.util.Properties;
 import pressf.domain.User;
 
 /**
@@ -15,8 +11,17 @@ import pressf.domain.User;
  */
 public class DbUserDao implements UserDao {
 
-    public DbUserDao() {
+    Properties properties;
+    String userDatabase;
+
+    private boolean isTest;
+
+    public DbUserDao(boolean isTest) throws Exception {
+        properties = new Properties();
+        properties.load(new FileInputStream("config.properties"));
+        userDatabase = properties.getProperty("userdb");
         initDatabase();
+        this.isTest = isTest;
     }
 
     @Override
@@ -54,11 +59,6 @@ public class DbUserDao implements UserDao {
         return new User(un, pw);
     }
 
-    @Override
-    public List<User> getAll() {
-        return null;
-    }
-
     public void initDatabase() {
         try {
             Connection connection = connect();
@@ -75,8 +75,15 @@ public class DbUserDao implements UserDao {
 
     private Connection connect() {
         Connection conn = null;
+        if (isTest) {
+            try {
+                conn = DriverManager.getConnection("jdbc:sqlite:test.db");
+            } catch (SQLException ex) {
+                System.out.println(ex.getMessage());
+            }
+        }
         try {
-            conn = DriverManager.getConnection("jdbc:sqlite:users.db");
+            conn = DriverManager.getConnection("jdbc:sqlite:" + userDatabase);
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
         }

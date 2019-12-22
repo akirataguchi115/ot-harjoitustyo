@@ -27,6 +27,4 @@ public interface UserDao {
      *
      * @return All users
      */
-    List<User> getAll();
-
 }

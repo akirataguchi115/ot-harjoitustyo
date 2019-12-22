@@ -19,6 +19,8 @@
                 <configuration>
                     <excludes>
                         <exclude>pressf/ui/*</exclude>
+                        <exclude>pressf/Main.java</exclude>
+                        <exclude>pressf/domain/User.java</exclude>
                     </excludes>
                 </configuration>
                 <executions>

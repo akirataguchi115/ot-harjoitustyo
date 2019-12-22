@@ -8,7 +8,6 @@ import java.io.IOException;
 import java.util.Properties;
 import org.junit.Before;
 import org.junit.Test;
-import pressf.dao.FileUserDao;
 import pressf.domain.PressFService;
 import static org.junit.Assert.*;
 
@@ -24,7 +23,7 @@ public class PressFServiceTest {
     @Before
     public void setUp() throws FileNotFoundException, IOException, Exception {
         this.file = new File("testfile.txt");
-        FileUserDao userDao = new FileUserDao("testfile.txt");
+//        FileUserDao userDao = new FileUserDao("testfile.txt");
         this.p = new PressFService(null);
         FileWriter fw = new FileWriter(this.file, false);
         BufferedWriter bw = new BufferedWriter(fw);
