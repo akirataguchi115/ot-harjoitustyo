@@ -1,10 +1,15 @@
 # Press F, Ohjelmistotekniikan harjoitustyö
 ## Dokumentaatio
+
+[Käyttöohje](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Vaatimusmäärittely](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
-[Työaikakirjanpito](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
-
 [Arkkitehtuurikuvaus](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
+[Testausdokumentti](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
+
+[Työaikakirjanpito](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 [Releaset](https://github.com/akirataguchi115/ot-harjoitustyo/releases)
 
@@ -26,6 +31,16 @@ Testikattavuusraportti luodaan komennolla
 mvn jacoco:report
 ```
 Testikattavuusraportia voi tarkastella avaamalla selaimella tiedosto *target/site/jacoco/index.html*
+
+### Suoritettavan jarin generointi
+
+Komento
+
+```
+mvn package
+```
+
+generoi hakemistoon _target_ suoritettavan jar-tiedoston _pressF-1.0-SNAPSHOT.jar_
 
 ### JavaDoc
 
