@@ -1,19 +1,14 @@
-# Käyttöohje
+# How to use
+Download the [pressf.jar](https://github.com/akirataguchi115/pressf/releases/download/viikko7/pressf.jar)
 
-Lataa tiedosto [pressf.jar](https://github.com/akirataguchi115/ot-harjoitustyo/releases/download/viikko7/pressf.jar)
-
-## Konfigurointi
-
-Ohjelma olettaa, että sen käynnistyshakemistossa on konfiguraatiotiedosto _config.properties_, joka määrittelee käyttäjät tallettavien tiedostojen nimet. Tiedoston muoto on seuraava
-
+## Configuration
+The program needs the configuration file _config.properties_ . The file should contain the following:
 ```
 userdb=users.db
 ```
 
-## Ohjelman käynnistäminen
-
-Ohjelma käynnistetään komennolla 
-
+## Starting the application
+The application is started with the command: 
 ```
 java -jar pressf.jar
 ```
