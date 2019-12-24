@@ -1,14 +1,15 @@
 # Press F
 Press F is a tool to do ```ctrl+F``` with multiple sources(f.ex. websites with subsites). This resolves the problem with doing multiple queries of ```ctrl+F``` while clicking yourself through tiresome amount of websites.
+Most of the documentation is in Finnish, the instructions-of-use are in English.
 ## Documentation
 
 [How to use](https://github.com/akirataguchi115/pressf/blob/master/dokumentaatio/kayttoohje.md)
 
-[Architecture(finnish)](https://github.com/akirataguchi115/pressf/blob/master/dokumentaatio/arkkitehtuuri.md)
+[Architecture(Finnish)](https://github.com/akirataguchi115/pressf/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[Testing document(finnish)](https://github.com/akirataguchi115/pressf/blob/master/dokumentaatio/testausdokumentti.md)
+[Testing document(Finnish)](https://github.com/akirataguchi115/pressf/blob/master/dokumentaatio/testausdokumentti.md)
 
-[Releases(finnish)](https://github.com/akirataguchi115/presff/releases)
+[Releases(Finnish)](https://github.com/akirataguchi115/presff/releases)
 
 ## Terminal commands
 
