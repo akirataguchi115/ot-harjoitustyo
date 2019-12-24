@@ -1,19 +1,16 @@
-# Press F, Ohjelmistotekniikan harjoitustyö
-## Dokumentaatio
+# Press F
+Press F is a tool to do ```ctrl+F``` with multiple sources(f.ex. websites with subsites). This resolves the problem with doing multiple queries of ```ctrl+F``` while clicking yourself through tiresome amount of websites.
+## Documentation
 
-[Käyttöohje](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+[How to use(finnish)](https://github.com/akirataguchi115/pressf/blob/master/dokumentaatio/kayttoohje.md)
 
-[Vaatimusmäärittely](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+[Architecture(finnish)](https://github.com/akirataguchi115/pressf/blob/master/dokumentaatio/arkkitehtuuri.md)
 
-[Arkkitehtuurikuvaus](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+[Testing document(finnish)](https://github.com/akirataguchi115/pressf/blob/master/dokumentaatio/testausdokumentti.md)
 
-[Testausdokumentti](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/testausdokumentti.md)
+[Releases(finnish)](https://github.com/akirataguchi115/presff/releases)
 
-[Työaikakirjanpito](https://github.com/akirataguchi115/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
-
-[Releaset](https://github.com/akirataguchi115/ot-harjoitustyo/releases)
-
-## Komentorivitoiminnot
+## Terminal commands
 
 ### Ohjelman käynnistäminen
 Ohjelma käynnistetään suorittamalla polusta _pressf/_ komento
